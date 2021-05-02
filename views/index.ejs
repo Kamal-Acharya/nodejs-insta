@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style3.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/font-instagram-png-removebg-preview.png" alt="">
+    
+    </nav>
+<div class="form" >
+<form action="/" method="POST">
+     <h2 style="text-align: center;">Sign up</h2>
+    <%if(sucess!=' '){%>
+       <p style="font-size: 15px ; color: green;"> <%=sucess%> </p>
+        <%}%>
+    <p>username</p>
+    <input type="text"name="username" placeholder="username">
+    <p>email ID</p>
+    <input type="text" name="email" placeholder="EmailID">
+    <p>name</p>
+    <input type="text" name="name" placeholder="name">
+    <p>Password</p>
+    <input type="text" name="password" placeholder="Password"> <br>
+    <button type="submit" value="submit"> Sign up</button>
+    
+<p >Dont have an account <br> <a href="/login">Login</a></p>  
+</form>  
+</div>
+  
+</body>
+</html>

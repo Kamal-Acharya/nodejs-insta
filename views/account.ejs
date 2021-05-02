@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+<!-- font-family: 'Akaya Kanadaka', cursive; -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<!-- font-family: 'Noto Sans JP', sans-serif; -->
+
+<body>
+    <nav class="navbar">
+        <img src="images/font-instagram-png-removebg-preview.png" alt="">
+        <input type="text" placeholder="Search">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="/account">Profile</a></li>
+            <li><a href="/profile">profile</a></li>
+            <li><a href="/upload">Post</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="con">
+        <% if(photo.length>0){%>
+            <% photo.forEach(function(row){%>
+                <img src="/profiles/<%=row.imagename%>" alt="">
+                <%})}%>
+                    <div class="content">
+                        <div class="box">
+                            <% if(user){%>
+                                <h2>
+                                    <%=user%>
+                                </h2>
+                                <%}%>
+
+
+                                    <img src="images/download.png" alt="" id="sett">
+                        </div>
+                        <div class="box">
+                            <p>
+                                <%=records.length%> Posts
+                            </p>
+                            <p>1000 followers</p>
+                            <p>200 following</p>
+                        </div>
+                        <div class="box">
+                            <h3>jalaj</h3>
+                        </div>
+                        <div class="box">
+                            <strong>
+                                <%=bi%>
+                            </strong>
+                        </div>
+                        <button><a href="/add">edit profile</a></button> 
+                    </div>
+
+    </div>
+    <div class="con2">
+        <div class="box">
+            <p> <a href="">Posts</a></p>
+            <p> <a href="">Reels</a></p>
+            <p> <a href="">IGTV</a></p>
+            <p> <a href="">Saved</a></p>
+            <p> <a href="">Tags</a></p>
+
+        </div>
+        <div class="image">
+
+            <% if(records.length>0){%>
+                <% records.forEach(function(row){%>
+
+                    <button><a href="account/delete/<%= row._id%>">delete</a></button>
+
+
+
+                    <img src="./uploads/<%= row.imagename%>" alt="">
+
+                    <%})}%>
+        </div>
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>

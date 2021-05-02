@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/style3.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="images/font-instagram-png.png" alt="">
+        <input type="text" placeholder="Search">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Message</a></li>
+            <li><a href="/account">Profile</a></li>
+            <li><a href="/upload">Post</a></li>
+            <li><a href="">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="form">
+        <input type="hidden" value="">
+        <form action="/add" method="POST">
+           
+            <h1 style="text-align: center;">add data</h1>
+            <p><%=fail%></p>
+            <p>Kadev3158</p>
+            <p>
+                <% if(photo.length>0){%>
+                    <% photo.forEach(function(row){%>
+                <img src="/profiles/<%=row.imagename%>" alt=""> <br>
+                
+            <a href="account/edit/<%=row._id%>">change your profile pic</a>
+            <%})}%>
+            </p>
+        <div class="input">
+            <p>Name</p>
+            <input type="text" value="" name="user" >
+        </div>
+        <div class="input">
+            <p>Bio</p>
+            <input type="text" value="" name="bio" >
+        </div>
+       
+
+        
+        <button type="submit" role="" value="submit">done</button>
+        </form>
+    </div>
+</body>
+</html>

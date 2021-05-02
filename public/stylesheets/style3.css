@@ -1,0 +1,41 @@
+.form{
+    height: 500px;
+    width: 600px;
+    border: 2px solid black;
+    transform: translate(60%,6%);
+    padding-top: 20px;
+    background-color: rgb(133, 156, 170);
+    border-radius: 20px;
+}
+input{
+    height: 25px;
+    width: 270px;
+    border: 1px solid black;
+    text-align: center;
+    margin:10px 160px ;
+   
+}
+button{
+    height: 40px;
+    width: 270px;
+    border-radius: 20px;
+    outline: none;
+    margin:20px 160px ;
+}
+p{
+    font-size: 20px;
+    font-family: monospace;
+    margin-left: 235px;
+}
+h2{
+    font-family: unset;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+}
+    img{
+        height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 100px;
+    }
