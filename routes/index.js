@@ -10,7 +10,7 @@ var user = require('../modules/user');
 var pic=require('../modules/pic');
 var data=require('../modules/add_data');
 
-var imagedata = image.find({});
+// var imagedata = image.find({});
 var picdata = pic.find({});
 var userdata = user.find({});
 var bio = data.find({},{'bio':1,'_id':0});
