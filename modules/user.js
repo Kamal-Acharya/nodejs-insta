@@ -1,5 +1,5 @@
 var mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost:27017/insta',{useNewUrlParser:true,useCreateIndex:true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://Kamal:Pkam@9067@cluster0.eluze.mongodb.net/Mern?retryWrites=true&w=majority',{useNewUrlParser:true,useCreateIndex:true});
 var conn=mongoose.connection;
 var userSchema=new mongoose.Schema({
     username:{

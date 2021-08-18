@@ -10,17 +10,19 @@ var user = require('../modules/user');
 var pic=require('../modules/pic');
 var data=require('../modules/add_data');
 
-// var imagedata = image.find({});
+var imagedata = image.find({});
 var picdata = pic.find({});
-var userdata = user.find({});
-var bio = data.find({},{'bio':1,'_id':0});
+
+
 
 /* GET home page. */
 if (typeof localStorage === "undefined" || localStorage === null) {
   var LocalStorage = require('node-localstorage').LocalStorage;
   localStorage = new LocalStorage('./scratch');
 }
-
+var getuser = localStorage.getItem('loginuser');
+var bio = data.findOne({name:getuser});
+var userdata = user.find({username:getuser});
 
 function checkuserlogin(res, req, next) {
   var usertoken = localStorage.getItem('usertoken');
@@ -96,12 +98,16 @@ router.get('/account', checkuserlogin, function (req, res, next) {
   var getuser = localStorage.getItem('loginuser');
   imagedata.exec((err, doc) => {
     if (err) throw err;
-picdata.exec((err,data)=>{
+userdata.exec((err,d)=>{
   if (err) throw err;
-bio.exec((err,da)=>{
+ 
+  picdata.exec((err,data)=>{
     if (err) throw err;
-  
-  res.render('account', { title: 'Express', records: doc,photo:data, user: getuser ,bi:da});
+
+
+
+  res.render('account', { title: 'Express', records: doc,photo:data, user: getuser ,na:d.name});
+
 });
 });
 
@@ -189,7 +195,7 @@ router.post('/login', function (req, res, next) {
 
       localStorage.setItem('usertoken', token);
       localStorage.setItem('loginuser', username);
-      res.redirect('/add');
+      res.redirect('/account');
     }
     else {
       res.render('login', { sucess: 'INVALID USERNAME OR PASSWORD' });
@@ -232,32 +238,32 @@ router.post('/profile',profile , function (req, res, next) {
   });
 });
 //--------------------------------------------------------------------------------------
-router.get('/add',checkuserlogin, function (req, res, next) {
-  picdata.exec((err,data)=>{
-    if (err) throw err;
-  res.render('add', { title: 'Express', sucess: '' ,fail:'' ,photo:data});
-  });
-});
-router.post('/add', function (req, res, next) {
-  var getuser = localStorage.getItem('loginuser');
-  var username = req.body.user;
-  var bio = req.body.bio;
-  var userdata = new data({
-  name:username,
-  bio:bio,
-  });
-  if(username==getuser)
-  {
-  userdata.save((err, doc) => {
-    if (err) throw err;
-res.redirect('/account');
-  });
-}
-else
-{
-  res.redirect('/account');
-}
-});
+// router.get('/add',checkuserlogin, function (req, res, next) {
+//   picdata.exec((err,data)=>{
+//     if (err) throw err;
+//   res.render('add', { title: 'Express', sucess: '' ,fail:'' ,photo:data});
+//   });
+// });
+// router.post('/add', function (req, res, next) {
+//   var getuser = localStorage.getItem('loginuser');
+//   var username = req.body.user;
+//   var bio = req.body.bio;
+//   var userdata = new data({
+//   name:username,
+//   bio:bio,
+//   });
+//   if(username==getuser)
+//   {
+//   userdata.save((err, doc) => {
+//     if (err) throw err;
+// res.redirect('/account');
+//   });
+// }
+// else
+// {
+//   res.redirect('/account');
+// }
+// });
 
 
 module.exports = router;

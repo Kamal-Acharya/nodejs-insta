@@ -16,15 +16,16 @@
 <!-- font-family: 'Noto Sans JP', sans-serif; -->
 
 <body>
+    
     <nav class="navbar">
-        <img src="images/font-instagram-png-removebg-preview.png" alt="">
+       <a href="/account"><img src="images/insta.png" alt=""></a> 
         <input type="text" placeholder="Search">
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="/account">Profile</a></li>
-            <li><a href="/profile">profile</a></li>
-            <li><a href="/upload">Post</a></li>
-            <li><a href="/logout">Logout</a></li>
+            
+            <li><a href="/account"><img id="one" src="images/icons8-home-48.png" alt=""></a></li>
+            <li><a href="/profile"><img id="two" src="images/icons8-love-96.png" alt=""></a></li>
+            <li><a href="/upload"><img id="three" src="/images/upload--v2.png" alt=""></a></li>
+            <li><a href="/logout"><img id="four" src="/images/icons8-logout-rounded-up-30.png" alt=""></a></li>
         </ul>
     </nav>
     <div class="con">
@@ -39,6 +40,7 @@
                                     <%=user%>
                                 </h2>
                                 <%}%>
+                                <button><a href="/add">edit profile</a></button> 
 
 
                                     <img src="images/download.png" alt="" id="sett">
@@ -51,19 +53,19 @@
                             <p>200 following</p>
                         </div>
                         <div class="box">
-                            <h3>jalaj</h3>
+                            <h3><%=na%></h3>
                         </div>
                         <div class="box">
                             <strong>
-                                <%=bi%>
+                             
                             </strong>
                         </div>
-                        <button><a href="/add">edit profile</a></button> 
+                       
                     </div>
 
     </div>
     <div class="con2">
-        <div class="box">
+        <div class="boxe">
             <p> <a href="">Posts</a></p>
             <p> <a href="">Reels</a></p>
             <p> <a href="">IGTV</a></p>

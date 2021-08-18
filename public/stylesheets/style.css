@@ -4,31 +4,46 @@
   padding: 0px;
 }
 body{
-  background:linear-gradient( #e8cbc0,
-  #737a99);
+  /* background:linear-gradient( #e8cbc0,
+  #737a99); */
   height: 200vh;
+  /* font-family: system-ui; */
+  font-family: 'Noto Sans JP', sans-serif; 
   
 }
 
 .navbar{
   display: flex;
-  justify-content: space-between;
+  justify-content:space-evenly;
   height: 50px;
   width: 100%;
   border: 2px solid  rgba(0,0,0,0.3);
 }
+ul img{
+  height: 35px;
+  width: 40px;
+}
+
+#four{
+  height: 34px;
+  width: 40px; 
+}
+
 img{
-  height: 50px;
-  width: 200px;
+  height: 35px;
+  margin-top: 10px;
+  width: 150px;
 }
 ul{
   display: flex;
   justify-content: space-evenly;
+  margin-top: -2px;
 
 }
 li{
   list-style: none;
-  margin: 20px;
+  margin-top: 0px;
+  margin-right: 60px;
 }
 a{
   text-decoration: none;
@@ -41,9 +56,10 @@ a{
   margin-top: 11px;
 }
 #sett{
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   margin-top: 30px;
+  border: none;
 }
 
 .con2{
@@ -52,15 +68,19 @@ a{
   /* border: 2px solid black; */
   border-top: 2px solid rgb(138, 134, 134);
   height: 50vh;
-  width: 70%;
-  margin-left: 200px;
-  margin-top: 10px;
+  width: 62%;
+  margin-left: 250px;
+  margin-top: -20px;
 }
-.con2 .box{
+.box{
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 5px;
+  justify-content: end;
+  margin-top: 21px;
   
+}
+.content{
+  margin-top: -20px;
+  /* border:2px solid black; */
 }
 .con2 p{
   padding:20px
@@ -68,9 +88,10 @@ a{
 
 }
 .image img{
-  width: 250px;
-  height: 250px;
-  margin: 5px;
+  width: 286px;
+  height: 300px;
+  margin: 15px;
+  margin-left: 10px;
 }
 
 
@@ -92,20 +113,30 @@ a{
   height: 150px;
   width: 150px;
   border-radius: 50%;
+  border: 5px solid grey;
+  border-spacing: 20px;
   margin-right: 100px;
 }
 .con button{
   width: 150px;
   height: 40px;
   background-color: white;
+  color: black;
+  text-transform: capitalize;
   border-radius: 10px;
   margin: 20px;
+  border: 1px solid #ddd;
 }
 .con h2{
   margin-top: 25px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .box{
+  display: flex;
+  justify-content: end;
+  margin-top: 2px;
+}
+.boxe{
   display: flex;
   justify-content: space-evenly;
   margin-top: 2px;
@@ -115,7 +146,7 @@ a{
   margin-right: 20px;
   /* font-family: monospace; */
   font-family: 'Akaya Kanadaka', cursive;
-  font-size: 15px;
+  font-size: 18px;
 }
 .box h3{
   margin-right: 249px;
@@ -124,7 +155,9 @@ a{
 .box strong{
   margin-right: 150px;
   margin-top: 20px;
-  font-family: 'Akaya Kanadaka', cursive;
+ font-size: 20px;
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ text-transform: capitalize;
 }
 
 a:hover{
@@ -135,14 +168,45 @@ a:hover{
   height: 20px;
   width: 60px;
   position: absolute;
-  margin: -10px 5px;
+  margin: -10px 15px;
   background-color: black;
 }
 .image button a{
  
   color:white;
 }
+.image{
+  /* margin-left: 228px; */
+}
 
+
+@media (max-width:768px) {
+
+  input{
+    display: none;
+  }
+  .navbar{
+    min-width: 100%;
+  }
+  .con2{
+    margin-left: 143px;
+  }
+  
+}
+
+@media (max-width:468px) {
+
+  input{
+    display: none;
+  }
+  .navbar{
+    min-width: 147%;
+  }
+  .con2{
+    margin-left: 143px;
+  }
+  
+}
 
 
 
