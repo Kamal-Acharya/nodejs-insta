@@ -186,6 +186,10 @@ router.post('/login', function (req, res, next) {
   var username = req.body.username;
   var password = req.body.password;
   var checkuser = user.findOne({ username: username });
+  if(!checkuser)
+  {
+    res.redirect('/');
+  }
   checkuser.exec((err, doc) => {
     if (err) throw err;
     var getuserid = doc._id;
@@ -218,6 +222,7 @@ router.get('/logout', function (req, res, next) {
 router.get('/profile', checkuserlogin, function (req, res, next) {
   picdata.exec((err, doc) => {
 
+  
     if (err) throw err;
 
     res.render('profile', { title: 'Express', sucess: '', records: doc });

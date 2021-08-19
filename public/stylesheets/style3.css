@@ -51,6 +51,13 @@ h2{
   border-radius: 0%;
   margin-right: 0px;
     }
+    h1{
+      text-align: center;
+      color: black;
+    }
+    a{
+      text-decoration: none;
+    }
 
     
     button {background-image: linear-gradient(to right, #06beb6 0%, #48b1bf  51%, #06beb6  100%)}
