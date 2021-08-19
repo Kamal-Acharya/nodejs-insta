@@ -8,8 +8,12 @@ body{
   #737a99); */
   height: 200vh;
   /* font-family: system-ui; */
-  font-family: 'Noto Sans JP', sans-serif; 
-  
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: capitalize;
+}
+h1{
+  font-size: 2.5rem;
+  color: black;
 }
 
 .navbar{
@@ -17,7 +21,7 @@ body{
   justify-content:space-evenly;
   height: 50px;
   width: 100%;
-  border: 2px solid  rgba(0,0,0,0.3);
+  border: 2px solid  #ddd;
 }
 ul img{
   height: 35px;
@@ -66,10 +70,10 @@ a{
   
   justify-content: center;
   /* border: 2px solid black; */
-  border-top: 2px solid rgb(138, 134, 134);
+  border-top: 2px solid #ddd;
   height: 50vh;
   width: 62%;
-  margin-left: 250px;
+  margin-left: 0px;
   margin-top: -20px;
 }
 .box{
@@ -82,16 +86,14 @@ a{
   margin-top: -20px;
   /* border:2px solid black; */
 }
-.con2 p{
-  padding:20px
-  /* font-family 'Noto Sans JP', sans-serif; */
 
-}
 .image img{
   width: 286px;
   height: 300px;
   margin: 15px;
   margin-left: 10px;
+  border-radius: 5px;
+  box-shadow: 6px 4px 8px -2px rgba(0,0,0,0.75);
 }
 
 
@@ -113,9 +115,11 @@ a{
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  border: 5px solid grey;
+  border: 3px solid grey;
   border-spacing: 20px;
   margin-right: 100px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  
 }
 .con button{
   width: 150px;
@@ -125,7 +129,8 @@ a{
   text-transform: capitalize;
   border-radius: 10px;
   margin: 20px;
-  border: 1px solid #ddd;
+  border: 3px solid #ddd;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
 }
 .con h2{
   margin-top: 25px;
@@ -169,7 +174,11 @@ a:hover{
   width: 60px;
   position: absolute;
   margin: -10px 15px;
-  background-color: black;
+  border-radius: 2px;
+  background-color:red;
+  outline: none;
+  border: none;
+
 }
 .image button a{
  
@@ -177,26 +186,32 @@ a:hover{
 }
 .image{
   /* margin-left: 228px; */
+  margin-top: 5%;
 }
 
 
 @media (max-width:768px) {
 
-  input{
+ .navbar input{
     display: none;
   }
   .navbar{
     min-width: 100%;
   }
   .con2{
-    margin-left: 143px;
+    margin-left: 82px;
+    width: 86%;
+  }
+  .image img{
+    width: 200px;
+    height: 220px;
   }
   
 }
 
 @media (max-width:468px) {
 
-  input{
+  .nabvar input{
     display: none;
   }
   .navbar{
@@ -208,5 +223,28 @@ a:hover{
   
 }
 
+.boxe p{
+  background-color:rgb(219, 223, 18);
+  box-shadow: 6px 4px 8px -2px rgba(0,0,0,0.75);
+  border-radius: 3px;
+  height: 20px;
+  width: 50px;
+  text-align: center;
+}
+.boxe p:nth-child(2n)
+{
+  background-color:rgb(224, 126, 13);
+}
+.boxe a{
+  color: white;
+}
+a:hover{
+  text-decoration: none;
+}
 
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
